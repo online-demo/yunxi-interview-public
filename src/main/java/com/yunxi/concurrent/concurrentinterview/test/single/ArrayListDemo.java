@@ -70,7 +70,7 @@ public class ArrayListDemo {
             while (iterator.hasNext()) {
                 String element = iterator.next();
                 if ("李四".equals(element)) {
-                    list.remove(element);
+                    iterator.remove();
                     System.out.println("线程1删除李四");
                 } else {
                     System.out.println("线程1遍历的元素：" + element);
@@ -80,12 +80,13 @@ public class ArrayListDemo {
 
         //线程2
         Thread thread2 = new Thread(() -> {
+
+            Iterator<String> iterator = list.iterator();
             try {
                 Thread.sleep(100);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            Iterator<String> iterator = list.iterator();
             while (iterator.hasNext()) {
                 String element = iterator.next();
                 System.out.println("线程2遍历的元素：" + element);

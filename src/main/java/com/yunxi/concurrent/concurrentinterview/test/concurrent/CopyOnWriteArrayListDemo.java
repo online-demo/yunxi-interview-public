@@ -38,11 +38,7 @@ public class CopyOnWriteArrayListDemo {
 
         //线程2
         Thread thread2 = new Thread(() -> {
-            try {
-                Thread.sleep(100);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+
             Iterator<String> iterator = list.iterator();
             while (iterator.hasNext()) {
                 String element = iterator.next();
