@@ -5,7 +5,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 
 /**
  * @Author 无双
- * @Date 2018/10/17
+ * @Date 2020/7/17
  * @Description 云析vip面试题——集合
  */
 public class CopyOnWriteArrayListDemo {

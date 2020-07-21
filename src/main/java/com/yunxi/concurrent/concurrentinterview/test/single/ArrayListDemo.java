@@ -6,17 +6,17 @@ import java.util.List;
 
 /**
  * @Author 无双
- * @Date 2018/10/17
+ * @Date 2020/7/17
  * @Description 云析vip面试题——集合
  */
 public class ArrayListDemo {
 
     public static void main(String[] args) {
         //测试单线程情况下集合的操作
-//        testSingleThread();
+        testSingleThread();
 
         //测试多线程情况下集合的操作
-        testMultiThread();
+//        testMultiThread();
     }
 
     /**
@@ -39,8 +39,8 @@ public class ArrayListDemo {
             String element = iterator.next();
             //删除李四这个元素
             if ("李四".equals(element)) {
-//                list.remove(element);
-                iterator.remove();
+                list.remove(element);
+//                iterator.remove();
             }
         }
         System.out.println(list.size());
